@@ -23,6 +23,7 @@ public class TeamLead extends Employee {
 			}
 		}
 		questionForLead = true;
+		// Question is 100% answered here.
 		boolean answerForQuestion = Chance.percentGamble(100);
 		if(answerForQuestion) {
 			System.out.println(TimeConverter.convertTime(timeClock.currentTime())
