@@ -38,4 +38,16 @@ public class Chance {
 		
 		return success;
 	}
+	
+	public static boolean percentGamble(int chanceSuccess) {
+		boolean success = false;
+		double chanceFail = 100 - chanceSuccess;
+		double chance = (100 * Math.random());
+		
+		if(chance > chanceFail) {
+			success = true;
+		}
+
+		return success;
+	}
 }

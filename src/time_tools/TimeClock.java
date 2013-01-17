@@ -1,5 +1,7 @@
 package time_tools;
 
+import chance_tools.Chance;
+
 /**
  * TimeClock.java
  * 
@@ -14,9 +16,14 @@ public class TimeClock {
     private int leadsAvailable = 0;
     private int employeesWorking = 0;
     
+    private int atFinalMeeting = 0;
+    private boolean finalStandupDone = false;
+    
     boolean leadMeetingInProgress = false;
     boolean hadLeadMeeting = false;
     boolean conferenceRoomAvailable = true;
+    
+    boolean managerQuestion = false;
     
 	/*
 	 * tick() - the clock 'ticks' for 1 minute of the appropriate time.
@@ -59,6 +66,21 @@ public class TimeClock {
 		}
 	}
 	
+	public synchronized void lunchMeeting(int maxTime) {
+		boolean hadLunch = false;
+		while(!hadLunch) {
+			if(!Chance.timeGamble(time, maxTime, 30, 30)) {
+				try {
+					wait();
+				} catch (InterruptedException e) {
+					
+				}
+			} else {
+				hadLunch = true;
+			}
+		}
+	}
+	
 	public synchronized boolean morningTeamMeeting(int id) {
 		boolean hadMeeting = false;
 		while(!hadMeeting) {
@@ -74,6 +96,7 @@ public class TimeClock {
 					}
 				}
 				hadMeeting = true;
+				conferenceRoomAvailable = true;
 			} else {
 				try {
 					wait();
@@ -87,8 +110,30 @@ public class TimeClock {
 		return hadMeeting;
 	}
 	
+	public synchronized void finalStandupMeeting() {
+		while(!everyoneAtStandup()) {
+			try {
+				wait();
+			} catch (InterruptedException e) {
+
+			}
+		}
+		meeting(15);
+		finalStandupDone = true;
+	}
+	
 	public synchronized void meetingWithEnd(int endTime) {
 		while(time < endTime) {
+			try {
+				wait();
+			} catch (InterruptedException e) {
+				
+			}
+		}
+	}
+	
+	public synchronized void questionSession() {
+		while(managerQuestion) {
 			try {
 				wait();
 			} catch (InterruptedException e) {
@@ -125,5 +170,34 @@ public class TimeClock {
     
     public int currentEmployees() {
     	return employeesWorking;
+    }
+    
+    public void arriveAtStandup() {
+    	atFinalMeeting++;
+    }
+    
+    public boolean everyoneAtStandup() {
+    	boolean everyoneHere = false;
+    	if(atFinalMeeting >= 13) {
+    		everyoneHere = true;
+    	}
+    	return everyoneHere;
+    }
+    
+    public boolean hadFinalStandup() {
+    	return finalStandupDone;
+    }
+    
+    // Incomplete Method
+    public synchronized void askProjectManager() {
+    	
+    }
+    
+    public synchronized void answerQuestion() {
+    	managerQuestion = false;
+    }
+    
+    public boolean isWaitingManagerQuestion() {
+    	return managerQuestion;
     }
 }

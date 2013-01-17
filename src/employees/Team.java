@@ -30,11 +30,13 @@ public class Team extends Thread {
 	}
 	
 	public void run() {
-		while(timeClock.currentTime() <= 1020) {
+		while(timeClock.currentTime() < 1020) {
+			timeClock.checkTime();
+			
 			int currentTime = timeClock.currentTime();
 			if((currentTime >= 480) && (currentTime <= 510)) {
 				if(Chance.timeGamble(currentTime, 510, 30) && !teamLead.isWorking()) {
-					teamLead.arrive();
+					teamLead.start();
 					devsAvailable++;
 				}
 				
@@ -42,7 +44,7 @@ public class Team extends Thread {
 				while(iterator.hasNext()) {
 					Developer currentDev = iterator.next();
 					if(Chance.timeGamble(currentTime, 510, 30) && !currentDev.isWorking()) {
-						currentDev.arrive();
+						currentDev.start();
 						devsAvailable++;
 					}
 				}
@@ -57,53 +59,41 @@ public class Team extends Thread {
 			
 			
 			if((currentTime >= 720) && (currentTime <= 750)) {
-				if(Chance.timeGamble(currentTime, 750, 30) && !teamLead.isEatingLunch()) {
-					teamLead.eatLunch();
+				if(Chance.timeGamble(currentTime, 750, 30) && !teamLead.currentlyEating()) {
+					teamLead.isLunchTime();
 				}
 				
 				ListIterator<Developer> iterator = developers.listIterator();
 				while(iterator.hasNext()) {
 					Developer currentDev = iterator.next();
-					if(Chance.timeGamble(currentTime, 750, 30) && !currentDev.isEatingLunch()) {
-						currentDev.eatLunch();
+					if(Chance.timeGamble(currentTime, 750, 30) && !currentDev.currentlyEating()) {
+						currentDev.isLunchTime();
 					}
 				}
 			}
 			
-			
-			if(currentTime <= 810) {
-				if(teamLead.endLunch() && teamLead.isEatingLunch()) {
-					teamLead.returnFromLunch();
-				}
+			if(currentTime == 960) {
+				teamLead.isFinalStandupTime();
 				
 				ListIterator<Developer> iterator = developers.listIterator();
 				while(iterator.hasNext()) {
-					Developer currentDev = iterator.next();
-					if(currentDev.endLunch() && currentDev.isEatingLunch()) {
-						currentDev.returnFromLunch();
-					}
+					iterator.next().isFinalStandupTime();
 				}
 			}
 			
-			
-			
-			if((currentTime >= 990) && (currentTime <= 1020)) {
-				if(teamLead.isWorking() && teamLead.timeToLeave()) {
-					teamLead.leave();
-				}
-				
-				ListIterator<Developer> iterator = developers.listIterator();
-				while(iterator.hasNext()) {
-					Developer currentDev = iterator.next();
-					if(currentDev.isWorking() && currentDev.timeToLeave()) {
-						currentDev.leave();
+			ListIterator<Developer> iterator = developers.listIterator();
+			while(iterator.hasNext()) {
+				Developer currentDev = iterator.next();
+				if(currentDev.currentlyHasQuestion()) {
+					boolean hasAnswer = teamLead.askTeamLeadQuestion();
+					if(hasAnswer) {
+						currentDev.questionAnswered();
+					} else {
+						// teamLead.askProjectManagerQuestion();
 					}
 				}
-				
 			}
-			
 		
-			timeClock.checkTime();
 		}
 	}
 

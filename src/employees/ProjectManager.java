@@ -1,5 +1,6 @@
 package employees;
 
+import chance_tools.Chance;
 import time_tools.TimeClock;
 import time_tools.TimeConverter;
 
@@ -7,8 +8,8 @@ public class ProjectManager extends Employee {
 	
 	public volatile boolean leadMeetingTime = false;
 	public volatile boolean tenMeetingTime = false;
-	public volatile boolean lunchTime = false;
 	public volatile boolean twoMeetingTime = false;
+	public volatile boolean question = false;
 
 	public ProjectManager(TimeClock timeClock) {
 		this.timeClock = timeClock;
@@ -21,7 +22,7 @@ public class ProjectManager extends Employee {
 	public void haveLeadMeeting() {
 		System.out.println(TimeConverter.convertTime(timeClock.currentTime()) 
 				+ " All Dev Leads have arrived. Meeting Time.");
-		timeClock.meeting(15);
+		timeClock.leadMeeting(15);
 		System.out.println(TimeConverter.convertTime(timeClock.currentTime()) 
 				+ " Dev Lead Meeting has Ended.");
 		leadMeetingTime = false;
@@ -40,10 +41,7 @@ public class ProjectManager extends Employee {
 		tenMeetingTime = false;
 	}
 	
-	public void isLunchTime() {
-		lunchTime = true;
-	}
-	
+	@Override
 	public void haveLunch() {
 		System.out.println(TimeConverter.convertTime(timeClock.currentTime()) 
 				+ " The Project Manager is headed to lunch for an hour.");
@@ -66,9 +64,34 @@ public class ProjectManager extends Employee {
 		twoMeetingTime = false;
 	}
 	
+	public void haveFinalStandup() {
+		timeClock.arriveAtStandup();
+		System.out.println(TimeConverter.convertTime(timeClock.currentTime()) 
+				+ " The Project Manager is at the final standup.");
+		timeClock.finalStandupMeeting();
+		System.out.println(TimeConverter.convertTime(timeClock.currentTime()) 
+				+ " The final standup of the day is over");
+		finalStandup = false;
+	}
+	
+	public void questionWaiting() {
+		question = true;
+	}
+	
+	public void answerQuestion() {
+		System.out.println(TimeConverter.convertTime(timeClock.currentTime()) 
+				+ " The Project Manager is answering a developer question.");
+		timeClock.meeting(10);
+		System.out.println(TimeConverter.convertTime(timeClock.currentTime()) 
+				+ " The Project Manager is done answering questions.");
+		question = false;
+		timeClock.answerQuestion();
+	}
+	
 	public void run() {
 		arrive();
 		while(timeClock.currentTime() < 1020) {
+			timeClock.checkTime();
 			
 			if(leadMeetingTime) {
 				haveLeadMeeting();
@@ -86,7 +109,18 @@ public class ProjectManager extends Employee {
 				haveTwoMeeting();
 			}
 			
+			if(finalStandup) {
+				if(Chance.timeGamble(timeClock.currentTime(), 975, 15)) {
+					haveFinalStandup();
+				}
+			}
+			
+			if(question) {
+				answerQuestion();
+			}
+			
 		}
+		while(timeClock.currentEmployees() != 0) {}
 		leave();
 	}
 	

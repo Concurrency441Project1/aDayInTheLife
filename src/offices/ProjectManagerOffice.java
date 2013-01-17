@@ -12,15 +12,10 @@ public class ProjectManagerOffice extends Thread {
 	private boolean hadTenMeeting = false;
 	private boolean hadLunch = false;
 	private boolean hadTwoMeeting = false;
-	private boolean question = false;
-	
+		
 	public ProjectManagerOffice( TimeClock timeClock ) {
 		this.projectManager = new ProjectManager(timeClock);
 		this.timeClock = timeClock;
-	}
-	
-	public synchronized void askQuestion() {
-		question = true;
 	}
 	
 	public void run() {
@@ -49,8 +44,12 @@ public class ProjectManagerOffice extends Thread {
 				hadTwoMeeting = true;
 			}
 			
-			if(question) {
-				
+			if(currentTime == 960 && !timeClock.hadFinalStandup()) {
+				projectManager.isFinalStandupTime();
+			}
+			
+			if(timeClock.isWaitingManagerQuestion()){
+				projectManager.questionWaiting();
 			}
 			
 			timeClock.checkTime();
