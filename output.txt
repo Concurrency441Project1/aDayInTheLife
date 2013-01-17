@@ -1,0 +1,224 @@
+8:00 The Project Manager has arrived. Welcome!!!
+8:03 Developer11 has arrived. Good Morning!
+8:06 Developer13 has arrived. Good Morning!
+8:08 Developer23 has arrived. Good Morning!
+8:08 Developer14 has arrived. Good Morning!
+8:09 Developer12 has arrived. Good Morning!
+8:09 Developer34 has arrived. Good Morning!
+8:10 Developer21 has arrived. Good Morning!
+8:10 Developer24 has arrived. Good Morning!
+8:12 Developer12 has a question.
+8:12 The Dev Lead had an answer.
+8:12 Developer12 got an answer to their question.
+8:12 Developer31 has arrived. Good Morning!
+8:14 All Dev Leads have arrived. Meeting Time.
+8:17 Developer32 has arrived. Good Morning!
+8:18 Developer23 has a question.
+8:19 The Dev Lead had an answer.
+8:19 Developer23 got an answer to their question.
+8:29 Dev Lead Meeting has Ended.
+8:29 Team 1 is having their morning meeting.
+8:29 Developer22 has arrived. Good Morning!
+8:29 Developer33 has arrived. Good Morning!
+8:41 Developer13 has a question.
+8:44 Team 1 has ended their morning meeting.
+8:44 The Dev Lead had an answer.
+8:44 Developer13 got an answer to their question.
+8:45 Developer24 has a question.
+8:45 Team 2 is having their morning meeting.
+9:00 Team 2 has ended their morning meeting.
+9:00 The Dev Lead had an answer.
+9:00 Developer24 got an answer to their question.
+9:01 Team 3 is having their morning meeting.
+9:15 Developer12 has a question.
+9:16 Team 3 has ended their morning meeting.
+9:16 Developer11 has a question.
+9:16 The Dev Lead had an answer.
+9:16 Developer12 got an answer to their question.
+9:19 Developer33 has a question.
+9:19 The Dev Lead had an answer.
+9:19 Developer33 got an answer to their question.
+9:21 Developer14 has a question.
+9:22 The Dev Lead had an answer.
+9:22 Developer14 got an answer to their question.
+9:29 Developer12 has a question.
+9:30 The Dev Lead had an answer.
+9:30 Developer12 got an answer to their question.
+9:31 Developer34 has a question.
+9:31 The Dev Lead had an answer.
+9:31 Developer34 got an answer to their question.
+9:35 Developer31 has a question.
+9:39 Developer22 has a question.
+9:39 The Dev Lead had an answer.
+9:39 Developer22 got an answer to their question.
+9:50 Developer12 has a question.
+9:50 The Dev Lead had an answer.
+9:50 Developer12 got an answer to their question.
+10:01 The Project Manager is off to his 10:00am meeting.
+10:12 Developer13 has a question.
+10:12 The Dev Lead had an answer.
+10:12 Developer13 got an answer to their question.
+10:41 Developer24 has a question.
+10:41 The Dev Lead had an answer.
+10:41 Developer24 got an answer to their question.
+10:45 Developer22 has a question.
+10:45 Developer12 has a question.
+10:46 The Dev Lead had an answer.
+10:46 Developer12 got an answer to their question.
+10:46 The Dev Lead had an answer.
+10:46 Developer22 got an answer to their question.
+10:47 Developer34 has a question.
+10:48 The Dev Lead had an answer.
+10:48 Developer34 got an answer to their question.
+10:50 Developer14 has a question.
+10:50 The Dev Lead had an answer.
+10:50 Developer14 got an answer to their question.
+10:51 Developer13 has a question.
+10:52 The Dev Lead had an answer.
+10:52 Developer13 got an answer to their question.
+10:58 Developer22 has a question.
+10:58 The Dev Lead had an answer.
+10:58 Developer22 got an answer to their question.
+11:00 Project Manager's 10am meeting is over.
+11:04 Developer22 has a question.
+11:04 The Dev Lead had an answer.
+11:04 Developer22 got an answer to their question.
+11:06 Developer33 has a question.
+11:06 The Dev Lead had an answer.
+11:06 Developer33 got an answer to their question.
+11:10 Developer12 has a question.
+11:10 The Dev Lead had an answer.
+11:10 Developer12 got an answer to their question.
+11:17 Developer14 has a question.
+11:17 The Dev Lead had an answer.
+11:17 Developer14 got an answer to their question.
+11:19 Developer24 has a question.
+11:20 The Dev Lead had an answer.
+11:20 Developer24 got an answer to their question.
+11:29 Developer22 has a question.
+11:30 Developer32 has a question.
+11:30 The Dev Lead had an answer.
+11:30 The Dev Lead had an answer.
+11:30 Developer32 got an answer to their question.
+11:30 Developer22 got an answer to their question.
+11:44 Developer12 has a question.
+11:45 The Dev Lead had an answer.
+11:45 Developer12 got an answer to their question.
+11:46 Developer12 has a question.
+11:47 The Dev Lead had an answer.
+11:47 Developer12 got an answer to their question.
+11:54 Developer22 has a question.
+11:54 The Dev Lead had an answer.
+11:54 Developer22 got an answer to their question.
+12:01 The Project Manager is headed to lunch for an hour.
+12:05 Developer23 has gone to lunch. Enjoy!
+12:07 Developer33 has gone to lunch. Enjoy!
+12:09 Developer34 has gone to lunch. Enjoy!
+12:13 Developer21 has gone to lunch. Enjoy!
+12:15 Developer22 has gone to lunch. Enjoy!
+12:16 Developer14 has gone to lunch. Enjoy!
+12:17 Developer24 has gone to lunch. Enjoy!
+12:21 Developer31 has gone to lunch. Enjoy!
+12:27 Developer32 has gone to lunch. Enjoy!
+12:30 Developer13 has gone to lunch. Enjoy!
+12:30 Developer12 has gone to lunch. Enjoy!
+12:30 Developer11 has gone to lunch. Enjoy!
+12:44 Developer34 is back from lunch. Time to work!
+12:54 Developer33 is back from lunch. Time to work!
+12:55 Developer23 is back from lunch. Time to work!
+1:01 The Project Manager is back from lunch.
+1:02 Developer14 is back from lunch. Time to work!
+1:05 Developer12 is back from lunch. Time to work!
+1:08 Developer23 has a question.
+1:08 The Dev Lead had an answer.
+1:08 Developer23 got an answer to their question.
+1:09 Developer22 is back from lunch. Time to work!
+1:10 Developer21 is back from lunch. Time to work!
+1:10 Developer11 is back from lunch. Time to work!
+1:11 Developer24 is back from lunch. Time to work!
+1:14 Developer13 is back from lunch. Time to work!
+1:15 Developer31 is back from lunch. Time to work!
+1:25 Developer32 is back from lunch. Time to work!
+1:39 Developer23 has a question.
+1:40 The Dev Lead had an answer.
+1:40 Developer23 got an answer to their question.
+1:51 Developer23 has a question.
+1:52 The Dev Lead had an answer.
+1:52 Developer23 got an answer to their question.
+1:53 Developer14 has a question.
+1:54 The Dev Lead had an answer.
+1:54 Developer14 got an answer to their question.
+1:59 Developer24 has a question.
+1:59 Developer23 has a question.
+2:00 Developer24 has a question.
+2:00 The Dev Lead had an answer.
+2:00 Developer23 got an answer to their question.
+2:00 The Dev Lead had an answer.
+2:00 Developer24 got an answer to their question.
+2:01 The Project Manager is off to his 2:00pm meeting.
+2:16 Developer34 has a question.
+2:17 The Dev Lead had an answer.
+2:17 Developer13 has a question.
+2:17 Developer34 got an answer to their question.
+2:18 The Dev Lead had an answer.
+2:18 Developer13 got an answer to their question.
+2:31 Developer24 has a question.
+2:32 The Dev Lead had an answer.
+2:32 Developer24 got an answer to their question.
+2:38 Developer33 has a question.
+2:39 The Dev Lead had an answer.
+2:39 Developer33 got an answer to their question.
+2:40 Developer24 has a question.
+2:40 The Dev Lead had an answer.
+2:40 Developer24 got an answer to their question.
+2:41 Developer24 has a question.
+2:42 The Dev Lead had an answer.
+2:42 Developer24 got an answer to their question.
+2:45 Developer32 has a question.
+2:45 The Dev Lead had an answer.
+2:45 Developer32 got an answer to their question.
+2:49 Developer32 has a question.
+2:50 The Dev Lead had an answer.
+2:50 Developer32 got an answer to their question.
+3:00 Project Manager's 2pm meeting is over.
+3:06 Developer21 has a question.
+3:18 Developer12 has a question.
+3:18 The Dev Lead had an answer.
+3:18 Developer12 got an answer to their question.
+3:26 Developer14 has a question.
+3:26 The Dev Lead had an answer.
+3:26 Developer14 got an answer to their question.
+3:32 Developer11 has a question.
+3:33 Developer21 has a question.
+3:43 Developer11 has a question.
+3:51 Developer21 has a question.
+4:01 Developer23 has arrived at the final standup.
+4:04 Developer22 has arrived at the final standup.
+4:04 Developer12 has arrived at the final standup.
+4:05 Developer24 has arrived at the final standup.
+4:06 Developer11 has arrived at the final standup.
+4:06 Developer33 has arrived at the final standup.
+4:07 Developer13 has arrived at the final standup.
+4:10 Developer14 has arrived at the final standup.
+4:11 Developer34 has arrived at the final standup.
+4:13 The Project Manager is at the final standup.
+4:14 Developer21 has arrived at the final standup.
+4:14 Developer31 has arrived at the final standup.
+4:15 Developer32 has arrived at the final standup.
+4:30 The final standup of the day is over
+4:32 Developer33 has a question.
+4:33 The Dev Lead had an answer.
+4:33 Developer33 got an answer to their question.
+4:33 Developer11 is leaving. Bye!
+4:36 Developer13 is leaving. Bye!
+4:38 Developer23 is leaving. Bye!
+4:38 Developer14 is leaving. Bye!
+4:39 Developer12 is leaving. Bye!
+4:39 Developer34 is leaving. Bye!
+4:40 Developer24 is leaving. Bye!
+4:40 Developer21 is leaving. Bye!
+4:42 Developer31 is leaving. Bye!
+4:47 Developer32 is leaving. Bye!
+4:59 Developer33 is leaving. Bye!
+4:59 Developer22 is leaving. Bye!
+5:00 The Project Manager is leaving. Closing Time!!!
