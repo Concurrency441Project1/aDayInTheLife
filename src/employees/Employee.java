@@ -48,8 +48,7 @@ public abstract class Employee extends Thread {
 		System.out.println(TimeConverter.convertTime(startLunch) + " Developer" + team + id + " has gone to lunch. Enjoy!");
 		timeClock.lunchMeeting(startLunch + 60);
 		endLunch = timeClock.currentTime();
-		int lunchLength = endLunch - startLunch;
-		System.out.println(TimeConverter.convertTime(endLunch) + " Developer" + team + id + " is back from lunch. Time to work! (" + lunchLength + ")" );
+		System.out.println(TimeConverter.convertTime(endLunch) + " Developer" + team + id + " is back from lunch. Time to work!");
 		lunchTime = false;		
 	}
 	
